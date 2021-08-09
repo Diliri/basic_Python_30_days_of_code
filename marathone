@@ -166,6 +166,88 @@ if __name__ == '__main__':
         for i in range(1,11):
             a=n*i
             print(f'{n} x {i} = {a}')
+    
+    
+    
+# DAY 6: Let's Review
+
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+how_many_rows = input()
+try:
+    rows_T = int(how_many_rows)
+    if rows_T<1 or rows_T>10:
+        quit()
+except:
+    print('Error')
+    quit()
+
+while rows_T   > 0:
+    
+    STDIN = input()  
+    a = str(STDIN)
+    a.strip()
+    if len(a)<2 or len(a)>10_000:
+        quit()
+    else:
+        b = str()
+        c = str()
+        for i in range(len(a)):
+            if i%2 == 0:
+                b = b + a[i] 
+            else:
+                c = c + a[i]
+        STDOUT = b + ' ' + c
+        print(STDOUT)
+        rows_T  -= 1
+
+
+DAY 7:  Arrays
+
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    if n<1 or n>1_000:
+        quit()
+    else:
+        
+        array = []
+        
+        input_string = input()
+        list_of_elements = [int(value) for value in input_string.split()]
+        for el in list_of_elements:
+            if el>0 and el<10_001:
+                array.append(el)
+                if len(array) == n:
+                    array.reverse()
+                    
+                    my_output = ''
+                    for i in array:
+                        my_output = my_output + str(i) + ' '
+                    print(my_output.rstrip())
+                    break 
+                else:
+                    continue
+            else:
+                print('Error')
+
+
+
+
+
 
 
 
