@@ -204,7 +204,7 @@ while rows_T   > 0:
         rows_T  -= 1
 
 
-DAY 7:  Arrays
+#DAY 7:  Arrays
 
 
 
@@ -245,6 +245,41 @@ if __name__ == '__main__':
                 print('Error')
 
 
+
+# DAY 8:  Dictionaries and Maps
+
+
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+n = int(n)
+if n<1 or n>10 ** 5:
+    quit()
+
+phoneBook = {}
+while len(phoneBook) != n:
+    one_of_the_phones = input()
+    one_of_the_phones = one_of_the_phones.split()
+    if len(one_of_the_phones[1]) == 8:
+        one_of_the_phones[1] = int(one_of_the_phones[1])
+        phoneBook[one_of_the_phones[0]] = one_of_the_phones[1]  
+    else:
+        continue
+
+# try to find name in phoneBook:
+import sys
+
+active = True
+while active:
+    name = sys.stdin.readline().strip()
+    name = name.lower()
+    if not name:
+        active = False
+    elif name in phoneBook:
+        print(f"{name}={phoneBook.get(name)}")
+    else:
+        print('Not found')
 
 
 
