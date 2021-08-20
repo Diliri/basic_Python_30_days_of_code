@@ -321,4 +321,39 @@ if __name__ == '__main__':
 
 
 
+# DAY 10: Binary Numbers
+
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+current_number_of_consecutive_1s = 0
+
+maximum_number_of_consecutive_1s = 0
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    
+    while n > 1:
+        if n % 2 == 1:
+            current_number_of_consecutive_1s += 1
+            
+            if current_number_of_consecutive_1s > maximum_number_of_consecutive_1s:
+                maximum_number_of_consecutive_1s = current_number_of_consecutive_1s
+                
+        elif n % 2 == 0:
+            current_number_of_consecutive_1s += 0
+        
+        n = n // 2
+        
+    print(maximum_number_of_consecutive_1s)
+        
+    
+
 
